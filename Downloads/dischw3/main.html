@@ -1,0 +1,224 @@
+<head>
+    <style>
+    
+    /* paragraph text size */
+    p {
+        font-size: 20px;
+    }
+    
+    /* vertical flex container */
+    .flex-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFDF0;
+        font-size: 20px;
+        gap: 15px;
+    }
+    
+    /* vertical flex container and centered */
+    .flex-container-vertical-center {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        height: 100vh; 
+        background-color: #FFFDF0; 
+        font-size: 20px;
+    }
+    
+    /* horizontal flex container */
+    .flex-container-2 { 
+        display: flex;
+        background-color: #FFFDF0;
+        gap: 60px;
+    }
+    
+    /* horizontal flex container w/ wider gap for the bottom half */
+    .flex-container-horizontal-wide-gap { 
+        display: flex;
+        background-color: #FFFDF0;
+        gap: 330px;
+    }
+    
+    /* top half's carousel layout */
+    .image-container {
+        display: flex;
+        align-items: flex-start; /* align to start of container */
+        gap: 5px; /* space between images */     
+        margin: 30px;
+    }
+    
+    /* standardize all images in the top half's carousel */
+    .image {
+        width: 130px; 
+        height: auto; /* aspect ratio */
+        box-shadow: 10px 20px 30px #E6D6B2; /* background shadow */
+        border-radius: 10px;
+    }
+    
+    /* vertical line that divides dashboard and rest of content */
+    .vertical-line {
+        width: 5px;
+        height: 650px; 
+        background-color: #FDF5D5; 
+    }
+    
+    /* line used to divide upper and bottom halves */
+    .custom-line {
+        border: 0; /* remove default border */
+        height: 2px; 
+        background-color: #FDF5D5; 
+        margin: 20px 0; /* spacing */
+    }
+    
+    /* moves 2nd image down in image carousel */
+    .lower {
+        margin-top: 20px; 
+    }
+    
+    /* background for "why us" blurb */
+    .rectangle-background {
+        width: 450px;       
+        height: 150px;       
+        background-color: #FDF5D5; /* rectangle color */
+        border-radius: 30px;
+        display: flex;
+        padding: 10px;
+    }
+    
+    /* rectangle for footer */
+    .footer {
+        width: 100%; 
+        height: 30px;
+        background-color: #FDF5D5;
+        display: flex;
+        align-items: center; 
+        padding: 10px;
+        text-size: 10px;
+    }
+    .footer p {
+        font-size: 15px; 
+        margin: 0; 
+    }
+    
+    /* social media button */
+    .social-media-button {
+        background-color: #2A2B2A; 
+        border: none;              
+        color: #FFFFFF;           
+        padding: 15px 32px;
+        font-family: "Figtree";
+        text-align: center;        
+        text-decoration: none;    
+        display: inline-block;     
+        font-size: 16px;         
+        margin: 4px 2px;         
+        cursor: pointer;          
+        border-radius: 5px;        
+    }
+    
+    </style>
+    </head>
+    
+    <!-- website code -->
+    
+    <body bgcolor="#FFFDF0">
+    
+    <div class="flex-container-2">
+        <div>
+            <h2>
+            <!-- name of website -->
+            <!--i don't know how to add the icons from the figma :')'-->
+            TeaTime
+            <h3> <!-- dashboard of header  -->
+                Dashboard
+            </h3>
+        
+            <div class="flex-container"> <!-- dashboard -->
+                <div>Home</div>
+                <div>Discover</div>
+                <div>Profile</div>
+            </div>
+            </h2>
+        </div>
+        
+        <div class="vertical-line"></div>
+        
+        <!-- start of info, and not dashboard stuff -->
+        <div class="flex-container">
+            <div class="flex-container-2">
+                <div>
+                    <h2>
+                    About Us
+                    </h2>
+                    
+                    <!--about us description -->
+                    <body> 
+                    We aim to connect the world through a common shared drink- milk tea!
+                    </body>
+                </div>
+                
+                <!--top half image carousel -->
+                <div>
+                    <div class="image-container">
+                        <img src="https://i.imgur.com/8e7CJOe.jpeg" alt="An image of the Oreo Creme Brulee Boba from Ume Tea accompanied by a bunny plush in the background." class="image">
+                        <img src="https://i.imgur.com/2XzeXKP.jpeg" alt="A close-up image of the peach tea from the Kung Fu Tea collaboration with Princess Peach." class="image lower">
+                        <img src="https://i.imgur.com/qTt0Sq4.jpeg" alt="An image of the Mango Sago drink from Ume Tea with a dreamy filter applied to it." class="image">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- horizontal line to divide the top and bottom halves -->
+            <div>
+                <hr class="custom-line">
+            </div>
+            
+            <!-- why us? and social media -->
+            
+            <div class="flex-container-horizontal-wide-gap">
+                <div class="flex-container-vertical-center">
+                    <!-- why us? header -->
+                    <h3>
+                    Why Us?
+                    </h3>
+                    
+                    <!-- description of "why us?"-->
+                    <div class="rectangle-background">
+                        <p>
+                        Finding opportunities to meet new people can be hard, but finding a common topic of interest with someone else is harder. We strive to foster a community over a popular loved drink, no matter whether you’re a new freshman or a rising senior.
+                        </p>
+                    </div>
+                </div>
+                
+                <!--social media buttons-->
+                <div>
+                    <div class="flex-container-vertical-center">
+                        <!--# contact us -->
+                        <div>
+                            <h3>
+                            Contact Us!
+                            </h3>
+                        </div>
+                    
+                        <!--# social media button for email  -->
+                        <div>
+                            <button class="social-media-button">Email</button>
+                        </div>
+                    
+                        <!--# social media button for insta -->
+                        <div>
+                            <button class="social-media-button">Instagram</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- footer at the bottom of the page -->
+            <!-- can't figure out how to make this flush against the vertical line separating the dashboard and rest of the content :''( -->
+            <div class="footer">
+                <p>Made by Isabella Yan (Chisa)</p>
+            </div>
+        </div>
+    </div>
+    
+    </body>
+    
